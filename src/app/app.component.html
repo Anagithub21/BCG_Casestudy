@@ -1,0 +1,26 @@
+<mat-sidenav-container>
+
+	<mat-sidenav #sidenav mode="over">
+		<label>Case Study</label>
+		<hr />
+		<nav>
+			<a routerLink="banner" (click)="clickHandler()" routerLinkActive="active">Banner</a>
+		</nav>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<mat-toolbar color="primary">
+			<header>
+
+				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+				<label>Case Study</label>
+				<nav>
+					<a routerLink="banner" routerLinkActive="active">Banner</a>
+				</nav>
+			</header>
+		</mat-toolbar>
+		<section>
+			<router-outlet></router-outlet>
+		</section>
+	</mat-sidenav-content>
+</mat-sidenav-container>
